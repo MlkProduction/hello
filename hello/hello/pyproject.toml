@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "hello"
+version = "0.1.0"
+description = "it's my first hello world"
+authors = ["George <malkov1-8@yandex.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+colorama = "^0.4.6"
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.28.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+say-hello = "hello.scripts.say_hello:say_hello"
+

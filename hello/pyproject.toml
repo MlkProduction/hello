@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "hello"
+version = "0.1.0"
+description = "it's my first hello world"
+authors = ["George <malkov1-8@yandex.com>"]  # Используй синтаксис с одной строкой, без фигурных скобок
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+colorama = "^0.4.6"
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.28.0"
+flake8 = "^7.1.1"
+
+[tool.poetry.scripts]
+say-hello = "hello.scripts.say_hello:say_hello"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
