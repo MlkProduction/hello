@@ -3,5 +3,9 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("article")
-# Create your views here.
+    tags = ["Hexlet - Django - Blog"]
+    return render(
+        request,
+        "articles/index.html",
+        context={"tags": tags},
+    )
